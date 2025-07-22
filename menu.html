@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="estilo.css">
+  
+  
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>Coffee Shop</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="menu.html">MENÚ DE SERVICIOS</a></li>
+        <li><a href="formulario.html">PEDIDOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav>
+    <a href="#video">Video</a>
+    <a href="#menu">Menú</a>
+    <a href="#imagen">Ambiente</a>
+    <a href="#eventos">Eventos</a>
+  </nav>
+
+  <h2 class="subtitulo">Descubre nuestra experiencia</h2>
+
+  <section class="contenido">
+
+    <!-- VIDEO -->
+    <div class="tarjeta" id="video">
+      <h2>¡Descubre nuestras sorpresas!</h2>
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+
+    <!-- MENÚ CON BOTÓN DESPLEGABLE -->
+    <div class="tarjeta" id="menu">
+      <h2>Menú</h2>
+      <button class="boton-menu" onclick="mostrarMenu()">Ver Menú Completo</button>
+      
+      <div id="contenidoMenu" class="menu-desplegable">
+        <ul>
+          <li><strong>CAFÉS</strong>
+            <ul>
+              <li>☕ Espresso........$21.50</li>
+              <li>☕ Capuchino.............$50</li>
+              <li>☕ Latte..............$43</li>
+              <li>☕ Mocaccino...........$21</li>
+            </ul>
+          </li>
+          <li><strong>POSTRES</strong>
+            <ul>
+              <li>🍰 Cheesecake de fresa..........$60</li>
+              <li>🍫 Brownie caliente..............$70</li>
+              <li>🍮 Flan napolitano..................$59</li>
+            </ul>
+          </li>
+          <li><strong>PASTELES POR PEDIDO</strong>
+            <ul>
+              <li>🎂 Pastel de chocolate............$560</li>
+              <li>🎂 Pastel tres leches...............$340</li>
+              <li>🎂 Pastel de zanahoria.................450</li>
+              <li>🎂 Pastel de tres pisos.................$2400</li>
+              <li>🎂 Pastel personalizado.................$$$</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="tarjeta" id="imagen">
+      <h2>Ambiente acogedor</h2>
+      <img src="cfe.png" alt="Ambiente cafetería">
+    </div>
+
+    <!-- EVENTOS -->
+    <div class="tarjeta" id="eventos">
+      <h2>Eventos semanales y especiales</h2>
+
+      <div class="evento">
+        <h3>🎤 Karaoke - Todos los martes y viernes</h3>
+        <p>Ven con tus amigos a cantar tus canciones favoritas en un ambiente relajado y divertido.</p>
+        <img src="karaoke.png" alt="Karaoke en la cafetería">
+      </div>
+
+    <br><br><br><br><br>
+      <div class="tarjeta" id="especial">
+        <div class="especial">
+          <h3>💍 Pedida de novios personalizada</h3>
+          <p>¿Quieres proponerle matrimonio a tu pareja? Nosotros decoramos el espacio con flores, luces y detalles especiales para que ese momento sea inolvidable.</p>
+          <img src="pedida.png" alt="Decoración romántica para propuesta">
+        </div>
+      </div>
+
+  </section>
+
+  <footer>
+    <p>Siguenos en TikTok o Instagram: <strong>"Coffee Shop"</strong></p>
+      <p>Por Nayes y Marian, tus meseras favoritas 🍰</p>
+    <div class="redes">
+      <a href="#"><img src="tik.png" alt="TikTok"></a>
+      <a href="#"><img src="ig.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT PARA DESPLEGAR -->
+  <script>
+    function mostrarMenu() {
+      const menu = document.getElementById('contenidoMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido - Coffee Shop</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #b11717;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contenido, form, table {
+      width: 90%;
+      max-width: 700px;
+      margin: 20px auto;
+      background-color: rgba(77, 149, 148, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2, h3, h1 {
+      text-align: center;
+      color: #5b3a29;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 95%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"],
+    button {
+      background-color: #5b3a29;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    
+
+    
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      height: 80px;
+      vertical-align: middle;
+    }
+
+
+
+    .redes img {
+      height: 30px;
+      margin: 5px;
+    }
+
+    .tarjeta img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>Coffee Shop</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="menu.html">MENÚ DE SERVICIOS</a></li>
+        <li><a href="formulario.html">PEDIDOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav>
+    <a href="#menu">Menú</a>
+    <a href="#contacto">Haz tu pedido</a>
+    <a href="#form1">Elimina pedido</a>
+  </nav>
+
+  <h2 class="subtitulo">Completa el formulario para hacer tu pedido</h2>
+
+  <section class="contenido">
+    <div class="tarjeta" id="menu">
+      <img src="Menu.png" alt="Interior de la cafetería">
+    </div>
+
+    <h2>Ingresar Pedido</h2>
+    <form id="forml" method="GET" action="insertar.php">
+      <section id="contacto">
+        <h3>Contacto</h3>
+        <table>
+          <tr>
+            <td><label for="id_cliente">Clave:</label></td>
+            <td><input type="text" name="id_cliente" id="id_cliente" required></td>
+          </tr>
+          <tr>
+            <td><label for="nombre">Nombre:</label></td>
+            <td><input type="text" id="nombre" name="nombre" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+          </tr>
+          <tr>
+            <td><label for="telefono">Teléfono:</label></td>
+            <td><input type="number" id="telefono" name="telefono" required></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <button type="submit">Enviar</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </form>
+
+    <h2>¿Quieres eliminar un registro?</h2>
+    <form id="form1" method="GET" action="eliminar.php">
+      <table>
+        <tr>
+          <td><label for="id_cliente">Clave a eliminar:</label></td>
+          <td><input type="text" name="id_cliente" id="id_cliente" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" name="borrar" value="Borrar">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <h2>¿Deseas modificar un cliente existente?</h2>
+    <form method="GET" action="modificarfor.php">
+      <table>
+        <tr>
+          <td><label for="id_cliente">Clave Cliente a modificar:</label></td>
+          <td><input type="text" name="id_cliente" id="id_cliente" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" value="Modificar Cliente">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <h1>Consultar Pedido</h1>
+    <form method="GET" action="consultar.php">
+      <table>
+        <tr>
+          <label for="no_pedido">ID del Cliente:</label>
+    <input type="text" name="no_pedido" id="no_pedido" required>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" value="Consultar">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </section>
+  
+
+
+  <footer>
+    <div class="footer-texto">
+      <p>Síguenos en TikTok o Instagram: <strong>"Coffee Shop"</strong></p>
+      <p>Por Nayes y Marian, tus meseras favoritas 🍰</p>
+    </div>
+    <div class="redes">
+      <a href="#"><img src="tik.png" alt="TikTok"></a>
+      <a href="#"><img src="ig.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+</body>
+</html>
